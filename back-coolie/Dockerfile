@@ -10,4 +10,4 @@ RUN npm install -s
 
 EXPOSE $PORT
 
-CMD [ "npm", "start" ]
+CMD [ "npm","run","start" ]
