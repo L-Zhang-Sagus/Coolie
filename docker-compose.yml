@@ -5,10 +5,10 @@ services:
     container_name: front-coolie
     env_file:
       - ./.env
-    build: 
+    build:
       context: ./front-coolie
       dockerfile: Dockerfile
-      args: 
+      args:
         PORT: "${PORT_FRONT}"
     ports:
       - "${PORT_FRONT}:${PORT_FRONT}"
@@ -20,7 +20,7 @@ services:
     container_name: back-coolie
     env_file:
       - ./.env
-    build: 
+    build:
       context: ./back-coolie
       dockerfile: Dockerfile
       args:
@@ -29,6 +29,6 @@ services:
       - "${PORT_BACK}:${PORT_BACK}"
     volumes:
       - ./back-coolie:/user/src/app
-volumes: 
-  dist:
-  mongodata:
+volumes:
+  dist: null
+  mongodata: null
