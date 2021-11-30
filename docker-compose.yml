@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  frontend:
+    container_name: front-coolie
+    env_file:
+      - ./.env
+    build: 
+      context: ./front-coolie
+      dockerfile: Dockerfile
+      args: 
+        PORT: "${PORT_FRONT}"
+    ports:
+      - "${PORT_FRONT}:${PORT_FRONT}"
+    volumes:
+      - ./front-coolie:/usr/src/app
+volumes: 
+  dist:
+  mongodata:
