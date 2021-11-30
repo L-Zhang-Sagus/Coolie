@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 ARG PORT
 
-COPY ./* ./
+COPY . ./
 
 RUN npm install -s
 

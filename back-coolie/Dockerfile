@@ -4,10 +4,10 @@ WORKDIR /usr/src/app
 
 ARG PORT
 
-COPY ./* /
+COPY . ./
 
 RUN npm install -s
 
 EXPOSE $PORT
 
-CMD [ "npm","run","start" ]
+CMD [ "npm","start"]
