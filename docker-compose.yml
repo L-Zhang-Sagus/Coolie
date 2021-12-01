@@ -1,6 +1,19 @@
 version: "3.7"
 
 services:
+  backend:
+    container_name: back-coolie
+    env_file:
+      - ./.env
+    build:
+      context: ./back-coolie
+      dockerfile: Dockerfile
+      args:
+        PORT: "${PORT_BACK}"
+    ports:
+      - "${PORT_BACK}:${PORT_BACK}"
+    volumes:
+      - ./back-coolie:/user/src/app
   frontend:
     container_name: front-coolie
     env_file:
@@ -16,19 +29,6 @@ services:
       - ./front-coolie:/usr/src/app
     depends_on:
       - backend
-  backend:
-    container_name: back-coolie
-    env_file:
-      - ./.env
-    build:
-      context: ./back-coolie
-      dockerfile: Dockerfile
-      args:
-        PORT: "${PORT_BACK}"
-    ports:
-      - "${PORT_BACK}:${PORT_BACK}"
-    volumes:
-      - ./back-coolie:/user/src/app
 volumes:
   dist: null
   mongodata: null
