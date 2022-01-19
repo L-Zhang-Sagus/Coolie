@@ -2,13 +2,15 @@ FROM node:17.1
 
 ARG PORT
 
-WORKDIR /usr/src/app
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install --silent
+
+RUN npm i -g @nestjs/cli
 
 COPY . ./
-
-RUN npm install -s
-
-RUN npm install -s -g @nestjs/cli@8.1.5
 
 CMD [ "npm", "run", "start:dev" ]
 
