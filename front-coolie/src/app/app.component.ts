@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { enpoints } from 'src/assets/api/api.enpoints';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +9,11 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent implements OnInit {
 
-  private baseUrl = environment.baseUrl;
   constructor(
     private http:HttpClient
   ){}
   ngOnInit(){
-    this.http.get(this.baseUrl).subscribe(res=>{
+    this.http.get(enpoints.home._base).subscribe(res=>{
       console.log(res)
     })
   }

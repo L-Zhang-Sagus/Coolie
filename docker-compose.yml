@@ -13,7 +13,7 @@ services:
     ports:
       - "${PORT_BACK}:${PORT_BACK}"
     volumes:
-      - ./back-coolie:/usr/src/app
+      - ./back-coolie:/app
   frontend:
     container_name: front-coolie
     env_file:
@@ -26,7 +26,7 @@ services:
     ports:
       - "${PORT_FRONT}:${PORT_FRONT}"
     volumes:
-      - ./front-coolie:/usr/src/app
+      - ./front-coolie:/app
     depends_on:
       - backend
 volumes:

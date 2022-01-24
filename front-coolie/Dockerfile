@@ -1,15 +1,15 @@
 FROM node:17.1
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 ARG PORT
 
+COPY package*.json ./
+
+RUN npm install --silent
+
 COPY . ./
 
-RUN npm install -s
-
-RUN npm install -g -s @angular/cli
-
-EXPOSE $PORT
+EXPOSE ${PORT}
 
 CMD ["npm", "start"]
