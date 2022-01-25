@@ -1,0 +1,12 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" >
+    <mat-selection-list [multiple]="false" class="sidenav-list">
+      <mat-list-option *ngFor="let menu of menuList" [value]="menu.value" class="option">
+      {{menu.name}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-drawer>
+  <div class="sidenav-content">
+    <ng-content></ng-content>
+  </div>
+</mat-drawer-container>
