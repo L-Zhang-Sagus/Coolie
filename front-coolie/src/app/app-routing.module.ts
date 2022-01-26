@@ -3,6 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo:'home'
+  },
+  {
+    path: 'home',
+    loadChildren: ()=> import('./features/home/home-routing.module').then(h => h.HomeRoutingModule)
+  },
+  {
     path: 'lv',
     loadChildren: () => import('./features/lv/lv.module').then(l => l.LvModule)
   }

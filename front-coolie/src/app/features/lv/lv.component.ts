@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MenuInterface } from "@common/interface"
+import { SidenavService } from "src/app/shared/sidenav/_service/sidenav.service";
 
 @Component({
   templateUrl:'./lv.component.html',
@@ -8,12 +9,16 @@ import { MenuInterface } from "@common/interface"
 export class LvComponent implements OnInit{
 
   public menuList:MenuInterface[] = [
-    {name:'Users', value: 'users', link:'/users'},
-    {name:'Produits', value: 'produits', link:'/produits'},
-    {name:'Operations', value: 'operations', link:'/operations'}
+    {name:'Users', value: 'users', link:'/lv/users'},
+    {name:'Produits', value: 'produits', link:'/lv/produits'},
+    {name:'Operations', value: 'operations', link:'/lv/operations'}
   ]
 
-  ngOnInit(): void {
+  constructor(
+    private _sidenavService: SidenavService
+  ){}
 
+  ngOnInit(): void {
+    this._sidenavService.openSidenav.next(false)
   }
 }

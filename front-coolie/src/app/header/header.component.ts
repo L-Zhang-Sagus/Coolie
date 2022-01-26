@@ -16,6 +16,9 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit(): void {
     this._sidenavService.openSidenav.next(this.sidenav);
+    this._sidenavService.openSidenav.subscribe(opened=>{
+      this.sidenav = opened
+    })
   }
 
   onOpenSidnav(){
