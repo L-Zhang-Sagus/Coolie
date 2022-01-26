@@ -7,6 +7,7 @@ import { HttpClientModule } from  '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './core/material.module';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { MaterialModule } from './core/material.module';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule,
+    CoreModule
 
   ],
   providers: [],

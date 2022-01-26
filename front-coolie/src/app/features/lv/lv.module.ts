@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { MaterialModule } from "src/app/core/material.module";
+import { CoreModule } from "src/app/core/core.module";
 import { SharedModule } from "src/app/shared/shared.module";
 import { IndexComponent } from "./index/index.component";
 import { LvRoutingModule } from "./lv-routing.module";
@@ -18,8 +18,8 @@ import { UsersComponent } from "./users/users.component";
   ],
   imports:[
     LvRoutingModule,
-    MaterialModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   providers:[],
   exports:[]
