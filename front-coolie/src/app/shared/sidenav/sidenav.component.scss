@@ -1,0 +1,21 @@
+.container{
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  .sidenav-content {
+    height: 100%;
+    width: 100%;
+    color: black;
+  }
+  .sidenav{
+    width: 200px;
+    .sidenav-list{
+      width: 100%;
+      .option{
+        width: 100%;
+        text-align: center;
+        height: 60px;
+      }
+    }
+  }
+}
