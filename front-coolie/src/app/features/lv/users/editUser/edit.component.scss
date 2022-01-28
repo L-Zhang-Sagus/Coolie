@@ -1,0 +1,34 @@
+.container{
+  width: 100%;
+  height: 100%;
+  &_card{
+    background-color: rgb(82, 69, 73);
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 500px;
+    height: 350px;
+    &_content{
+      margin-top: 30px;
+      &_form{
+        width: 100%;
+        &_field{
+          width: 100%;
+          input:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px rgba(82, 69, 73, 0.89) inset;
+            -webkit-text-fill-color: rgb(255, 255, 255);
+          }
+        }
+        &_buttons{
+          margin-top: 50px;
+          display: flex;
+          flex-direction: row;
+          justify-content:center;
+          button{
+            display: block;
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}

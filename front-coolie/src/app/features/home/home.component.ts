@@ -6,6 +6,7 @@ import { SidenavService } from "src/app/shared/sidenav/_service/sidenav.service"
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
+  public email = "fdsqfdsd@ggg.com"
   constructor(
     private _sidenavService: SidenavService
   ){}

@@ -16,5 +16,33 @@
         font-size: 20px;
       }
     }
+    &_content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &_row{
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        .item{
+          height: 80px;
+        }
+        &_email{
+          width: 500px;
+        }
+        &_button{
+          width: 200px;
+          button{
+            margin-right: 20px;
+          }
+        }
+        &_icon{
+          color: rgb(214, 101, 101);
+        }
+        &_icon:hover{
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

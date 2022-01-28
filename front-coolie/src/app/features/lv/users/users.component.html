@@ -5,15 +5,20 @@
         Users List
       </div>
       <div class="button">
-        <button mat-raised-button color="accent">Add User</button>
+        <a mat-raised-button color="accent" [routerLink]="['/lv/add-user']">Add User</a>
       </div>
     </mat-card-header>
     <mat-card-content class="container_card_content">
       <mat-list>
         <div class="container_card_content_row" *ngFor="let user of users">
           <mat-divider></mat-divider>
-          <mat-list-item>
+          <mat-list-item class="item">
             <div class="container_card_content_row_email">{{user.email}}</div>
+            <div class="container_card_content_row_button">
+              <button mat-raised-button color="warn">Test</button>
+              <button mat-raised-button color="warn">Update</button>
+            </div>
+            <div class="container_card_content_row_icon"><mat-icon>delete</mat-icon></div>
           </mat-list-item>
         </div>
       </mat-list>

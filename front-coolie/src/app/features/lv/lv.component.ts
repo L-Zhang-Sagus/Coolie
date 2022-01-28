@@ -9,9 +9,9 @@ import { SidenavService } from "src/app/shared/sidenav/_service/sidenav.service"
 export class LvComponent implements OnInit{
 
   public menuList:MenuInterface[] = [
-    {name:'Users', value: 'users', link:'/lv/users'},
-    {name:'Produits', value: 'produits', link:'/lv/produits'},
-    {name:'Operations', value: 'operations', link:'/lv/operations'}
+    {name:'Users', value: 'users', link:'/lv/user'},
+    {name:'Produits', value: 'produits', link:'/lv/produit'},
+    {name:'Operations', value: 'operations', link:'/lv/operation'}
   ]
 
   constructor(

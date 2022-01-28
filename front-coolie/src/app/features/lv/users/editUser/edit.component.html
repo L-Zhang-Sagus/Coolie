@@ -1,0 +1,41 @@
+<div class="container">
+  <mat-card class="container_card">
+    <mat-card-header class="container_card_header">
+      <mat-card-title>Add User</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content class="container_card_content">
+      <form #userForm="ngForm" class="container_card_content_form" (submit)="addUser(userForm)">
+        <mat-form-field class="container_card_content_form_field" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input
+          matInput
+          type="text"
+          name="email"
+          placeholder="Ex. pat@example.com"
+          [ngModel]="email"
+          #email="ngModel"
+          required
+          email
+          >
+        </mat-form-field>
+        <mat-form-field class="container_card_content_form_field" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input
+          matInput
+          type="password"
+          name="password"
+          ngModel
+          #password="ngModel"
+          required
+          >
+        </mat-form-field>
+        <div class="container_card_content_form_buttons">
+          <button type="submit" mat-stroked-button color="accent" [disabled]="userForm.invalid">Submit</button>
+          <button type="reset" mat-stroked-button color="accent">Reset</button>
+          <button mat-stroked-button color="accent" (click)="goBack()">Back</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

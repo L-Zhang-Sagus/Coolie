@@ -6,6 +6,7 @@ import { LvRoutingModule } from "./lv-routing.module";
 import { LvComponent } from "./lv.component";
 import { OperationsComponent } from "./operations/operations.component";
 import { ProduitsComponent } from "./produits/produits.component";
+import { EditComponent } from "./users/editUser/edit.component";
 import { UsersComponent } from "./users/users.component";
 
 @NgModule({
@@ -14,7 +15,8 @@ import { UsersComponent } from "./users/users.component";
     IndexComponent,
     UsersComponent,
     ProduitsComponent,
-    OperationsComponent
+    OperationsComponent,
+    EditComponent
   ],
   imports:[
     LvRoutingModule,

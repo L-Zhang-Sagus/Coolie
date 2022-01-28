@@ -1,10 +1,13 @@
 import { NgModule } from "@angular/core";
-import { MaterialModule } from "src/app/core/material.module";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { CoreModule } from "src/app/core/core.module";
 import { HomeComponent } from "./home.component";
 
 @NgModule({
   imports: [
-    MaterialModule
+    CoreModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     HomeComponent
